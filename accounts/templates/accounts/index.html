@@ -49,10 +49,10 @@
                 </button>
                 <div class="collapse navbar-collapse main-menu-part" id="navbarSupportedContent">
                     <ul class="social-links ml-auto">
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/josueadimado" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/josue_adimado/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/josue-adimado/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/josueadimado" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </nav>
@@ -226,16 +226,64 @@
     <section class="cunsult-section padding-l-r">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-7">
+                <div class="col-xl-6">
                     <div class="subs-content">
                         <h3>Interested in doing a project together?</h3>
-                        <p>I’m always open to discussing product design work or partnership opportunities.</p>
+                        <p>I'm ready to start working together building the next amazing life-changer digital product.</p>
                     </div>
                 </div>
-                <div class="col-xl-5">
-                    <div class="cmn-btn-grp">
-                        <a href="mailto:josueadimado@gmail.com" class="emailme">Email Me</a>
+                <div class="col-xl-6">
+                    <div class="subs-content" id="loading" style="display: none;">
+                        <p>Loading</p>
                     </div>
+                    <div class="section-wrapper">
+							<div class="contact-form-part">
+								<form class="contact-form" action="#" id="serviceform" method="dialog" accept-charset="utf-8">
+                                    <!--{%csrf_token%}-->
+                                    {% if messages %}
+                                    {% for message in messages %}
+                                    <span style="color:red;">{{message}}</span>
+                                    {%endfor%}
+                                    {%endif%}
+									<div class="row">
+										<div class="col-lg-12 frm-grp">
+                                            <label for="" style="color: #767676; font-size: 16px; line-height: 1.8; font-family: var(--para-font);">How can I help you?</label>
+                                            <select name="service"  id=""  class="selectclass" required>
+                                                <option value="Web Design" selected>Web Design</option>
+                                                <option value="Web Application">Web Application</option>
+                                                <option value="Digital Marketing">Digital Marketing</option>
+                                                <option value="Online Store">Online Store</option>
+                                                <option value="Front-End Development">Front-End Development</option>
+                                                <option value="Flyers Design">Flyers Design</option>
+                                            </select>
+										</div>
+										<div class="col-lg-12 frm-grp">
+                                            <label for="" style="color: #767676; font-size: 16px; line-height: 1.8; font-family: var(--para-font);">Tell me more about your project</label>
+                                            <textarea name="message" placeholder="" required></textarea>
+										</div>
+										<div class="col-lg-6 frm-grp">
+                                            <label for="" style="color: #767676; font-size: 16px; line-height: 1.8; font-family: var(--para-font);">Do you have a budget?</label>
+                                            <select name="budget"  id=""  class="selectclass" required>
+                                                <option  value="300$ - 1k$" selected>300$ - 1k$</option>
+                                                <option value="1k$ - 3k$">1k$ - 3k$</option>
+                                                <option value="3k$ - 5k$">3k$ - 5k$</option>
+                                                <option value="+5k">+5k$</option>
+                                            </select>
+										</div>
+										<div class="col-lg-6 frm-grp">
+                                            <label for="" style="color: #767676; font-size: 16px; line-height: 1.8; font-family: var(--para-font);">Do you have a deadline?</label>
+                                            <input type="text" name="deadline" placeholder="" required>
+										</div>
+                                        <div class="col-lg-12 frm-grp">
+											<input type="email" name="email" placeholder="Your Email" required>
+										</div>
+										<div class="col-lg-12 frm-grp">
+											<a class="cmn-btn sub-btn" style="margin: 0;text-transform: none;font-weight: 500;font-family: var(--heading-font-bold);font-size: 20px;color: #eeeeee;" onclick="save()" type="submit">Submit</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
                 </div>
             </div>
         </div>
@@ -311,12 +359,14 @@
         <div class="footer-bottom">
             <div class="container">
                 <ul class="social-links">
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/josueadimado" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/josue_adimado/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/josue-adimado/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/josueadimado" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://t.me/josueadimado" target="_blank"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=233206783693" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
                 </ul>
-                <p class="copy-right">Copyright 2020 <a href="/">Josué Adimado</a> All Rights Resered</p>
+                <p class="copy-right">Copyright {%now "Y"%} <a href="/">Josué Adimado</a> All Rights Resered</p>
             </div>
         </div>
     </section>
@@ -329,6 +379,51 @@
         </span>
     </div>
     <!-- scroll to top end -->
+
+
+    <script>
+
+        function save(){
+            var serviceform = document.getElementById("serviceform")
+            var info = serviceForm("serviceform")
+            serviceform.style.display="none"
+            var loading = document.getElementById("Loading")
+            // loading.style.display="block"
+            myapi(info)
+            console.log(info)
+        }
+
+        function serviceForm(formId){
+            let myForm = document.getElementById(formId);
+            let formData = new FormData(myForm);
+            var saved = []
+            const info = {};
+
+            for(var pair of formData.entries()){
+                info[pair[0]] = pair[1]
+            }
+            return info;
+        }
+
+        function myapi(mydata){
+            var url = "http://127.0.0.1:8000/serviceapi/"
+            const http = new XMLHttpRequest();
+                    http.open('POST', url)
+                    http.setRequestHeader('content-type', 'application/json');
+                    http.send(JSON.stringify(mydata));
+                    http.onload = function(){
+                var resp =http.responseText;
+                var json_resp = JSON.parse(resp);
+                var loading = document.getElementById("Loading")
+                console.log(json_resp["message"])
+                // loading.innerHTML = "<p>"+json_resp["message"]+"</p>"
+                window.location.href = "http://127.0.0.1:8000/"
+                    }
+        }
+
+    </script>
+
+
 
     <!-- jQuery library js link -->
     <script src="/static/assets/js/jquery-3.3.1.min.js"></script>
@@ -344,7 +439,6 @@
     <script src="/static/assets/js/isotope.pkgd.min.js"></script>
     <!-- main js link -->
     <script src="/static/assets/js/main.js"></script>
-
 </body>
 
 
